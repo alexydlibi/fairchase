@@ -1,0 +1,47 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+body::before {
+    display:block;
+    content:"";
+    height: 130px;
+}
+
+// #dbc07c  (light yellow)
+// #2d1634  (purple)
+// #d9d9d9  (light grey)
+// #bfbfbf  (dark grey)
+// #542c62  (light purple)
+
+$primary: #2d1634;
+$secondary:#dbc07c;
+$warning:#d9d9d9;
+$danger: #bfbfbf;
+$success: #542c62 ;
+
+$font-family-base: 'Calibri', sans-serif;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+.nav-link{
+    color: white;
+    font-size: large;
+  
+    &:hover {
+      color: #dbc07c;
+    }
+  }
+
+.nav-link-foot{
+    color: white;
+    font-size: medium;
+  
+    &:hover {
+      color: #dbc07c;
+    }
+  }
+  
