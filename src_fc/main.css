@@ -11745,3 +11745,23 @@ textarea.form-control-lg {
 .nav-link-foot:hover {
   color: #dbc07c;
 }
+
+.navbar-toggler {
+  background-color: #dbc07c;
+}
+.navbar-toggler:hover {
+  background-color: #fff;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.ml-4 {
+  margin-left: 1rem !important;
+}
+
+.my-list {
+  padding-left: 0;
+  list-style-position: inside;
+}

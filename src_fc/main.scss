@@ -45,3 +45,24 @@ $font-family-base: 'Calibri', sans-serif;
     }
   }
   
+  .navbar-toggler{
+    background-color: #dbc07c;
+
+    &:hover { 
+      background-color: #fff;
+      
+    }
+  }
+
+  .navbar-toggler-icon{
+    color: white;
+  }
+
+  .ml-4 {
+    margin-left: 1rem !important;
+  }
+
+  .my-list {
+    padding-left: 0;
+    list-style-position: inside;
+  }

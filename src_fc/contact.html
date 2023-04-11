@@ -1,49 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Home</title>
-	<meta name="description" content="Welcome to Fairchase">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <title>Fair Chase</title>
 </head>
-<body>
-	<header>
-        <div class="logo">
-            <img src="images/Logo.jpg" alt="Fair Chase Logo" width="267" height="150">
-        </div>
-          
-            <nav class="main-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="services.html" class="dropbtn">Services</a>
-                        <div class="dropdown-content">
-                        <a href="collections.html">Collections</a>
-                        <a href="">Advisory</a>
-                        </div>
-                    </li>                  
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-	</header>
+<body class="bg-warning">
 
-    <main>
-        <form action="submit.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email address:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-          </form>          
+<!-- nav bar -->
+  <nav class="navbar navbar-expand-lg bg-primary navbar-light py-0 p-lg-1 pt-lg-1 fixed-top">
+      <div class="container bg-primary">
+          <a href="about.html" class="navbar-brand">
+              <img src="images/Logo.png" alt="Fair Chase Logo" height="120">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-    </main>
+          <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav ms-auto text-white">
+                  <li class="nav-item hover">
+                      <a href="index1.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="about.html" class="nav-link">About us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="services.html" class="nav-link">Services</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                      <a href="contact.html" class="nav-link">Contact</a>
+                  </li>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <hr style="background-color: #542c62; height: 5px; margin: 0;">
+
+  <section class="p-5 text-primary" style="background-image: url('images/Slide12.JPG'); background-size: cover;">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md order-md-last">
+            </div>
+            <div class="col-md">
+                <h3 class="text-left mb-4 text-primary">Contact Us</h3>
+                      <p class="lead mb-4">Please fee free to get in touch by filling in the form out below. We'd be delighted to discuss how we can help.</p>
+                <form action="sendmail.php" method="POST">
+                    <div class="mb-3">
+                      <label for="exampleInputName" class="form-label"><b>Name:</b></label>
+                      <input type="name"
+                      name="name"
+                      class="form-control" id="exampleInputName" aria-describedby="name" placeholder="Enter your name" style="font-style: italic;">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"><b>Email address:</b></label>
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" style="font-style: italic;">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputSubject1" class="form-label"><b>Subject:</b></label>
+                      <input type="text" class="form-control" id="exampleInputSubject1" aria-describedby="emailHelp" placeholder="Enter the subject of your message" style="font-style: italic;">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputMessage1" class="form-label"><b>Message:</b></label>
+                      <textarea class="form-control" id="exampleInputMessage1" rows="4" placeholder="Enter your message" style="font-style: italic;"></textarea>
+                    </div>
+                    <button type="submit" value="Send" class="btn btn-primary">Submit</button>
+                </form>
+                      
+            </div>
+        </div>
+    </div>
+</section>
+
+  <footer class="bg-primary text-center text-lg-start text-white py-0 p-lg-1 pt-lg-1 ">
+    <hr style="background-color: #542c62; height: 5px; margin: 5px; padding-bottom: 5px;">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-4 mb-md-0">
+        <p>&copy; Fair Chase Ltd 2023</p>
+      </div>
+      <div class="col-lg-4 mb-md-0">
+        <div class="d-flex justify-content-center text-white">
+          <a href="privacy.html" class="me-3 nav-link-foot">Privacy Policy</a>
+          <a href="terms.html" class="me-3 nav-link-foot">Terms of Use</a>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-md-0">
+        <div class="d-flex justify-content-end">
+          <a href="#" class="me-3 text-white"><img src="images/facebook.png"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="me-3 text-white"><img src="images/twitter.png"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="me-3 text-white"><img src="images/linkedin.png"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class=""><i class="fab fa-instagram"><img src="images/instagram.png"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
