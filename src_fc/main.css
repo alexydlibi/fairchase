@@ -11765,3 +11765,8 @@ textarea.form-control-lg {
   padding-left: 0;
   list-style-position: inside;
 }
+
+#debtor_admin {
+  margin-top: 0px;
+  padding-top: 0px;
+}
