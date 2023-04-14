@@ -1,3 +1,9 @@
+<?php
+header("Location: /privacy");
+exit;
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

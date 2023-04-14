@@ -1,3 +1,8 @@
+<?php
+header("Location: /contact");
+exit;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

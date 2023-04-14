@@ -1,3 +1,9 @@
+<?php
+header("Location: /services");
+exit;
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
