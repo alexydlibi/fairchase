@@ -1,3 +1,9 @@
+<?php
+header("Location: /about");
+exit;
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
