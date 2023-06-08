@@ -10,28 +10,6 @@
     <link rel="icon" type="image/icon" href="/Logofb.png">
     <script src="bootstrap.bundle.min.js"></script>
 
-    <script>
-      // Check if the browser supports the History API
-if (window.history && window.history.pushState) {
-  // Remove the ".html" extension from the URL when the page loads
-  if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.length > 5) {
-    var urlWithoutExtension = window.location.pathname.slice(0, -10);
-    window.history.replaceState(null, null, urlWithoutExtension);
-  }
-
-  // Use the History API to remove the ".html" extension when a link is clicked
-  document.addEventListener('click', function (event) {
-    var target = event.target;
-    if (target.tagName === 'A' && target.href.substr(-5) === '.html' && target.getAttribute('target') !== '_blank') {
-      event.preventDefault();
-      var urlWithoutExtension = target.href.slice(0, -5);
-      window.history.pushState(null, null, urlWithoutExtension);
-    }
-  });
-}
-
-    </script>
-
     <title>Fair Chase</title>
 </head>
 <body class="bg-warning">
@@ -212,7 +190,7 @@ if (window.history && window.history.pushState) {
                   <div class="pb-3">
                     <img src="https://img.icons8.com/ios/50/000000/new-post--v1.png"/>
                   </div>
-                  <a href="mailto:info@fairchase.co.uk" class="mb-0 lead">info@fairchase.co.uk</a>
+                  <a href="mailto:alex@fairchase.co.uk" class="mb-0 lead">info@fairchase.co.uk</a>
                 </div>
             </div>
             <div class="d-flex gap-2 w-100 justify-content-between">
