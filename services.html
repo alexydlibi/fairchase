@@ -7,27 +7,6 @@
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/icon" href="/Logofb.png">
     <script src="bootstrap.bundle.min.js"></script>
-    <script>
-      // Check if the browser supports the History API
-if (window.history && window.history.pushState) {
-  // Remove the ".html" extension from the URL when the page loads
-  if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.length > 5) {
-    var urlWithoutExtension = window.location.pathname.slice(0, -5);
-    window.history.replaceState(null, null, urlWithoutExtension);
-  }
-
-  // Use the History API to remove the ".html" extension when a link is clicked
-  document.addEventListener('click', function (event) {
-    var target = event.target;
-    if (target.tagName === 'A' && target.href.substr(-5) === '.html' && target.getAttribute('target') !== '_blank') {
-      event.preventDefault();
-      var urlWithoutExtension = target.href.slice(0, -5);
-      window.history.pushState(null, null, urlWithoutExtension);
-    }
-  });
-}
-
-    </script>
     <title>Fair Chase</title>
 </head>
 <body class="bg-warning">
@@ -196,7 +175,7 @@ if (window.history && window.history.pushState) {
       <div class="col d-flex align-items-start">
         <div class="text-center">
           <img src="https://img.icons8.com/external-goofy-line-kerismaker/80/000000/external-Presentation-business-goofy-line-kerismaker.png"/>
-          <p class="p-3">Assessing debtors to inform policy, processes and address your key questions and concerns</p>
+          <p class="p-3">Assessing debtors to drive policy, new processes and address your key questions and concerns</p>
         </div>
       </div>
       <div class="col d-flex align-items-start">
