@@ -54,27 +54,26 @@
             <div class="col-md">
                 <h1 class="text-left mb-4 text-primary">Contact Us</h1>
                       <p class="lead mb-4">Please get in touch by filling in the form out below. We'd be delighted to discuss how we can help</p>
-                <form action="sendmail.php" method="POST">
-                    <div class="mb-3">
-                      <label for="exampleInputName" class="form-label"><b>Name:</b></label>
-                      <input type="name"
-                      name="name"
-                      class="form-control" id="exampleInputName" aria-describedby="name" placeholder="Enter your name" style="font-style: italic;">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"><b>Email address:</b></label>
-                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" style="font-style: italic;">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputSubject1" class="form-label"><b>Subject:</b></label>
-                      <input type="subject" class="form-control" id="exampleInputSubject1" aria-describedby="emailHelp" placeholder="Enter the subject of your message" style="font-style: italic;">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputMessage1" class="form-label"><b>Message:</b></label>
-                      <textarea class="form-control" id="exampleInputMessage1" rows="4" placeholder="Enter your message" style="font-style: italic;" type="message"></textarea>
-                    </div>
-                    <button type="submit" value="Send" class="btn btn-primary">Submit</button>
-                </form>
+                      <form action="sendmail.php" method="POST">
+                        <div class="mb-3">
+                          <label for="exampleInputName" class="form-label"><b>Name:</b></label>
+                          <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="name" placeholder="Enter your name" style="font-style: italic;">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"><b>Email address:</b></label>
+                          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" style="font-style: italic;">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputSubject1" class="form-label"><b>Subject:</b></label>
+                          <input type="text" name="subject" class="form-control" id="exampleInputSubject1" aria-describedby="emailHelp" placeholder="Enter the subject of your message" style="font-style: italic;">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputMessage1" class="form-label"><b>Message:</b></label>
+                          <textarea class="form-control" name="message" id="exampleInputMessage1" rows="4" placeholder="Enter your message" style="font-style: italic;"></textarea>
+                        </div>
+                        <button type="submit" value="Send" class="btn btn-primary">Submit</button>
+                      </form>
+                      
                       
             </div>
         </div>
