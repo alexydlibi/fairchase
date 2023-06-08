@@ -13,5 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     header('Content-Type: application/json');
     echo json_encode($response);
+    exit(); // Terminate the script after sending the response
 }
 ?>
