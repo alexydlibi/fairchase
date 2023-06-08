@@ -44,8 +44,6 @@ if (window.history && window.history.replaceState) {
     setTimeout(function() {
       successMessage.style.display = 'none';
     }, 2000); // 2000 milliseconds = 2 seconds
-  
-    return false; // Prevent form submission and page redirect
   }
   
   document.querySelector('form').addEventListener('submit', function(event) {
@@ -54,23 +52,29 @@ if (window.history && window.history.replaceState) {
     var form = event.target;
     var formData = new FormData(form);
   
-    fetch(form.action, {
-      method: form.method,
-      body: formData
-    })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      if (data.success) {
-        showSuccessMessage();
+    var request = new XMLHttpRequest();
+    request.open(form.method, form.action, true);
+    request.setRequestHeader('Accept', 'application/json');
+  
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        var response = JSON.parse(request.responseText);
+        if (response.success) {
+          showSuccessMessage();
+        } else {
+          console.log('Failed to send email.');
+        }
       } else {
-        console.log('Failed to send email.');
+        console.log('An error occurred:', request.status);
       }
-    })
-    .catch(function(error) {
-      console.log('An error occurred:', error);
-    });
+    };
+  
+    request.onerror = function() {
+      console.log('An error occurred during the request.');
+    };
+  
+    request.send(formData);
   });
+  
   
   
