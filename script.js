@@ -36,3 +36,13 @@ if (window.history && window.history.replaceState) {
     xhr.send();
   }
   
+
+  function showSuccessMessage() {
+    var successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+  
+    setTimeout(function() {
+      successMessage.style.display = 'none';
+    }, 2000); // 2000 milliseconds = 2 seconds
+  }
+  
