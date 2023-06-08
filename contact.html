@@ -54,7 +54,7 @@
             <div class="col-md">
                 <h1 class="text-left mb-4 text-primary">Contact Us</h1>
                       <p class="lead mb-4">Please get in touch by filling in the form out below. We'd be delighted to discuss how we can help</p>
-                      <form action="sendmail.php" method="POST">
+                      <form action="sendmail.php" method="POST" onsubmit="showSuccessMessage()">
                         <div class="mb-3">
                           <label for="exampleInputName" class="form-label"><b>Name:</b></label>
                           <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="name" placeholder="Enter your name" style="font-style: italic;">
@@ -73,7 +73,9 @@
                         </div>
                         <button type="submit" value="Send" class="btn btn-primary">Submit</button>
                       </form>
-                      
+                      <div id="successMessage" style="display: none;">
+                        Email sent successfully.
+                      </div>
                       
             </div>
         </div>
