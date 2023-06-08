@@ -76,5 +76,3 @@ if (window.history && window.history.replaceState) {
     request.send(formData);
   });
   
-  
-  
