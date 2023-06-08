@@ -8,8 +8,29 @@
 
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/icon" href="/Logofb.png">
-    <script src="bootstrap.bundle.min.js">if(window.location.pathname.split('/').pop()==='index.html'){window.location = window.location.pathname.replace('/index.html',"");}</script>
+    <script src="bootstrap.bundle.min.js"></script>
 
+    <script>
+      // Check if the browser supports the History API
+if (window.history && window.history.pushState) {
+  // Remove the ".html" extension from the URL when the page loads
+  if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.length > 5) {
+    var urlWithoutExtension = window.location.pathname.slice(0, -10);
+    window.history.replaceState(null, null, urlWithoutExtension);
+  }
+
+  // Use the History API to remove the ".html" extension when a link is clicked
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (target.tagName === 'A' && target.href.substr(-5) === '.html' && target.getAttribute('target') !== '_blank') {
+      event.preventDefault();
+      var urlWithoutExtension = target.href.slice(0, -5);
+      window.history.pushState(null, null, urlWithoutExtension);
+    }
+  });
+}
+
+    </script>
 
     <title>Fair Chase</title>
 </head>
