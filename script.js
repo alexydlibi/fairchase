@@ -44,5 +44,33 @@ if (window.history && window.history.replaceState) {
     setTimeout(function() {
       successMessage.style.display = 'none';
     }, 2000); // 2000 milliseconds = 2 seconds
+  
+    return false; // Prevent form submission and page redirect
   }
+  
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+  
+    var form = event.target;
+    var formData = new FormData(form);
+  
+    fetch(form.action, {
+      method: form.method,
+      body: formData
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      if (data.success) {
+        showSuccessMessage();
+      } else {
+        console.log('Failed to send email.');
+      }
+    })
+    .catch(function(error) {
+      console.log('An error occurred:', error);
+    });
+  });
+  
   
