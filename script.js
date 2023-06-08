@@ -38,8 +38,11 @@ if (window.history && window.history.replaceState) {
   
 
   function showSuccessMessage() {
-    var successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'block';
+    var successMessage = document.createElement('div');
+    successMessage.textContent = 'Email sent successfully.';
+    successMessage.className = 'success-message';
+  
+    document.body.appendChild(successMessage);
   
     setTimeout(function() {
       successMessage.style.display = 'none';
@@ -52,27 +55,19 @@ if (window.history && window.history.replaceState) {
     var form = event.target;
     var formData = new FormData(form);
   
-    var request = new XMLHttpRequest();
-    request.open(form.method, form.action, true);
-    request.setRequestHeader('Accept', 'application/json');
-  
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        var response = JSON.parse(request.responseText);
-        if (response.success) {
-          showSuccessMessage();
-        } else {
-          console.log('Failed to send email.');
-        }
+    fetch(form.action, {
+      method: form.method,
+      body: formData
+    })
+    .then(function(response) {
+      if (response.ok) {
+        showSuccessMessage();
       } else {
-        console.log('An error occurred:', request.status);
+        throw new Error('Error: ' + response.status);
       }
-    };
-  
-    request.onerror = function() {
-      console.log('An error occurred during the request.');
-    };
-  
-    request.send(formData);
+    })
+    .catch(function(error) {
+      console.log('An error occurred:', error);
+    });
   });
   
